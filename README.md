@@ -60,7 +60,7 @@ Terraform建议用modules+applications结构，把一些可复用模块放到mod
 <img width="1178" alt="image" src="https://user-images.githubusercontent.com/99634236/154201924-532c9a42-5667-42cc-9859-fb38bda2daa6.png">
 
 
-**样例架构2：**AWS+GCP
+**样例架构2** AWS+GCP
 
 <img width="754" alt="image" src="https://user-images.githubusercontent.com/99634236/154201866-2c73e58c-2849-4eb8-871f-de6c20e0f157.png">
 
