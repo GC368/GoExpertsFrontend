@@ -8,7 +8,7 @@ interface IExpertDisplayProps {
   experts: IExpertInfo[];
 }
 
-const ExpertDisplay: React.FC<IExpertDisplayProps | null> = ({
+const ExpertDisplay: React.FC<IExpertDisplayProps> = ({
   experts,
 }: IExpertDisplayProps) => (
   <Box className={styles.expertsDisplayBox}>
