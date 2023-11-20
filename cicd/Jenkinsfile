@@ -23,7 +23,7 @@ pipeline {
                 // Install project dependencies
                 sh 'npm install'
                 
-                // Run npm build
+                // Run npm 
                 sh 'npm run build'
             }
         }
