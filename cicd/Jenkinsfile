@@ -1,50 +1,12 @@
 pipeline {
     agent any
 
-    environment {
-        AWS_ACCESS_KEY_ID     = credentials('aws-access-key-id')
-        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
-        AWS_DEFAULT_REGION    = 'us-east-1'
-    }
-
     stages {
-        stage('Checkout') {
+        stage('Hello') {
             steps {
-                // Checkout the code from GitHub
-                git 'https://github.com/GC368/GoExpertsFrontend.git'
+                echo 'Hello World'
             }
-        }
-
-        stage('Build') {
-            steps {
-                // Install Node.js and npm
-                tool 'nodejs'
-                
-                // Install project dependencies
-                sh 'npm install'
-                
-                // Run npm 
-                sh 'npm run build'
-            }
-        }
-
-        stage('Deploy to AWS') {
-            steps {
-                script {
-                    // Install AWS CLI
-                    sh 'pip install awscli'
-
-                    // Deploy to AWS
-                    sh 'aws s3 sync ./build s3://testuseast123'
-                    
-                }
-            }
-        }
-    }
-
-    post {
-        success {
-            // Add any post-deployment steps or notifications here
         }
     }
 }
+
