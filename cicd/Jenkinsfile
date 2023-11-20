@@ -34,7 +34,7 @@ pipeline {
                     // Install AWS CLI
                     sh 'pip install awscli'
 
-                    // Deploy to AWS S3
+                    // Deploy to AWS
                     sh 'aws s3 sync ./build s3://testuseast123'
                     
                 }
