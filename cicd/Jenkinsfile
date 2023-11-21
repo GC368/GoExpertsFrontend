@@ -38,7 +38,7 @@ pipeline {
                     sh 'aws s3 sync ./build s3://testuseast123'
                     // withAWS(region: 'us-east-1', credentials: '923094287044') {
                     //     s3Upload(files: './build', bucket: 'testuseast123', path: 'path/on/s3')
-                    }
+                    // }
                 }
             }
         }
