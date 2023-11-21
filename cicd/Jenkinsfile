@@ -44,7 +44,6 @@ pipeline {
 
     post {
         always {
-            // Add any post-deployment steps or notifications here
             cleanWs()
                   sh 'ls -la'
         }
