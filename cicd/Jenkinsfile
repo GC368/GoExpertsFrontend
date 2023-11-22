@@ -29,10 +29,7 @@ pipeline {
         stage('Deploy to AWS') {
             steps { 
                 withAWS(credentials: AWS_CRED, region: 'us-east-1') {
-                    sh 'aws s3 cp build s3://testuseast123/'
-                    // withAWS(region: 'us-east-1', credentials: '923094287044') {
-                    //     s3Upload(files: './build', bucket: 'testuseast123', path: 'path/on/s3')
-                    // }
+                    sh 'aws s3 cp ./build s3://testuseast123/'
                 }
             }
         }
