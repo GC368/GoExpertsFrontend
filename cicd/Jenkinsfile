@@ -27,9 +27,7 @@ pipeline {
         }
 
         stage('Deploy to AWS') {
-            steps {
-                sh 'pip install awscli'
-                
+            steps { 
                 withAWS(credentials: AWS_CRED, region: 'us-east-1') {
                     sh 'aws s3 sync ./build/ s3://testuseast123/'
                     // withAWS(region: 'us-east-1', credentials: '923094287044') {
