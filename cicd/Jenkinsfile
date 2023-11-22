@@ -36,7 +36,7 @@ pipeline {
 
                     // Deploy to AWS 
                     // sh 'aws s3 sync ./build s3://testuseast123'
-                    withAWS(region: 'us-east-1', credentials: '923094287044') {
+                    withAWS(region: 'us-east-1', credentials: 'aws_goexpert') {
                         sh 'aws s3 cp ./build s3://testuseast123 --recursive'
                     }
                     // withAWS(region: 'us-east-1', credentials: '923094287044') {
