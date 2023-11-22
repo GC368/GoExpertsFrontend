@@ -5,7 +5,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from GitHub
-                git 'https://github.com/GC368/GoExpertsFrontend.git'
+               git branch: 'main',
+                   url: 'https://github.com/GC368/GoExpertsFrontend.git'
             }
         }
 
