@@ -12,9 +12,6 @@ pipeline {
 
         stage('Build') {
             steps {
-                // Install Node.js and npm
-                tool 'nodejs'
-                
                 // Install project dependencies
                 sh 'npm install'
                 
@@ -26,9 +23,6 @@ pipeline {
         stage('Deploy to AWS') {
             steps {
                 script {
-                    // Install AWS CLI
-                    sh 'pip install awscli'
-
                     // Deploy to AWS 
                     // sh 'aws s3 sync ./build s3://testuseast123'
                     withAWS(region: 'us-east-1', credentials: 'aws_goexpert') {
