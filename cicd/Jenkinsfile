@@ -4,6 +4,9 @@ pipeline {
     tools {
             nodejs 'Node16'
         }
+    environment {
+        AWS_CRED = 'aws_goexpert'
+    }
 
     stages {
         stage('Checkout') {
@@ -25,7 +28,7 @@ pipeline {
 
         stage('Deploy to AWS') {
             steps {
-                withAWS(credentials: 'aws_goexpert', region: 'us-east-1') {
+                withAWS(credentials: AWS_CRED, region: 'us-east-1') {
                     sh 'aws s3 sync ./build/ s3://testuseast123/'
                     // withAWS(region: 'us-east-1', credentials: '923094287044') {
                     //     s3Upload(files: './build', bucket: 'testuseast123', path: 'path/on/s3')
