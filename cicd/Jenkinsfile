@@ -12,6 +12,9 @@ pipeline {
 
         stage('Build') {
             steps {
+                tools {
+                       nodejs 'Node16'
+                }
                 // Install project dependencies
                 sh 'npm install'
                 // Run npm build
