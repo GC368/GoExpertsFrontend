@@ -52,4 +52,6 @@ Thumbs.db
 # Ignore macOS .DS_Store files
 .DS_Store
 
-terraform-s3-website/.terraform/providers/registry.terraform.io/hashicorp/aws/*/terraform-provider-aws_*
+*.tfstate
+*.tfstate.backup
+.terraform/
