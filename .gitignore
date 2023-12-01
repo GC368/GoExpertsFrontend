@@ -52,7 +52,7 @@ Thumbs.db
 # Ignore macOS .DS_Store files
 .DS_Store
 
-#.terraform/
+.terraform/
 terraform.tfstate*
 *.tfstate
 *.tfstate.*
