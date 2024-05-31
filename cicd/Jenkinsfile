@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy to AWS') {
             steps { 
                 withAWS(credentials: AWS_CRED, region: 'us-east-1') {
-                    sh 'aws s3 cp ./build s3://testuseast123/ --recursive'
+                    sh 'aws s3 cp ./build s3://allenguo.link/ --recursive'
                 }
             }
         }
